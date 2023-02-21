@@ -11,10 +11,10 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', '')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+SESSION = environ.get('SESSION', 'Media_Search')
+API_ID = int(environ.get('API_ID', '21818317'))
+API_HASH = environ.get('API_HASH', 'bc6ab154300cc41fe127ca4d658dc75d')
+BOT_TOKEN = environ.get('BOT_TOKEN', "5648584054:AAE9CIa4GcQzhQomkbvmHB6xosNYjqtiazo")
 
 #Port
 PORT = environ.get("PORT", "8080")
@@ -35,13 +35,13 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb://class:class@ac-lgjhszf-shard-00-00.l5t6qsp.mongodb.net:27017,ac-lgjhszf-shard-00-01.l5t6qsp.mongodb.net:27017,ac-lgjhszf-shard-00-02.l5t6qsp.mongodb.net:27017/?ssl=true&replicaSet=atlas-n0ufwp-shard-0&authSource=admin&retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Telegram")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MX_Support_Bot')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
@@ -49,7 +49,7 @@ CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "⚡<b>File uploaded by
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "⚡<b>File uploaded by [TN 68 FILM FACTORY](https://t.me/TN68_FilmFactory)</b>⚡\n\nName: {file_caption} \n\n⚙️ <b>Size: </b><code>{file_size}</code>🔥  ↭ <b>Join Now [TN 68 FILM FACTORY](https://t.me/TN68_FilmFactory)</b> ↭  🔥")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Your Query: {query}</b> \n‌‌‌‌IMDb: \n\n🏷 Title: {title}\n🌟 Rating : {rating}/10\n🎭 Genres: {genres}\n📆 Year: {year}\n⏰ Duration : {runtime}\n🎙️ Languages : {languages}\n🔖 Plot : {plot}\n\n♥️ Thanks for using me ♥️ \n\n💛 Please Share Us 💛\n\n⚠️Click on the button 👇 below to get your query privately")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
-SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), False)
+SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "False"), False)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
@@ -71,21 +71,21 @@ LOG_STR += f"Your current IMDB template is {IMDB_TEMPLATE}"
     
       # URL Shortener #
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'mrlinks.xyz')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', 'c8d7dffdc29ff63bfc80e2daf9d2c13095c57ddb')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'Mdiskshortner.link')
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '7aeadf631fe48fce0ed4b480300ee24c89a1b8ae')
 
      # Auto Delete For Group Message (Self Delete) #
-SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 300))
+SELF_DELETE_SECONDS = int(environ.get('SELF_DELETE_SECONDS', 500))
 SELF_DELETE = environ.get('SELF_DELETE', True)
 if SELF_DELETE == "True":
     SELF_DELETE = True
 
     # Download Tutorial Button #
 DOWNLOAD_TEXT_NAME = "📥 HOW TO DOWNLOAD 📥"
-DOWNLOAD_TEXT_URL = "https://t.me/Tn68_tutorials/3"
+DOWNLOAD_TEXT_URL = "https://t.me/Mdiskshortnerlink_Tutorial"
 
    # Custom Caption Under Button #
-CAPTION_BUTTON = "Get Updates"
-CAPTION_BUTTON_URL = "https://t.me/TN68_FilmFactory"
+CAPTION_BUTTON = "JOIN CHANNEL"
+CAPTION_BUTTON_URL = "https://t.me/iPopkarn"
 
    # Auto Delete For Bot Sending Files #
